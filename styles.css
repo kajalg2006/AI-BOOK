@@ -1,0 +1,254 @@
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code&display=swap');
+        
+        :root {
+            --primary-color: #050614;
+            --secondary-color: #a5b4fc;
+            --background-color: #0f172a;
+            --text-color: #e2e8f0;
+            --accent-color: #22d3ee;
+            --code-background: #1e293b;
+            --section-background: #1e293b;
+            --border-color: #334155;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+            
+        }
+        
+        h2, h3, h4 {
+            margin-top: 2rem;
+            color: var(--secondary-color);
+        }
+        
+        nav {
+            background-color: var(--section-background);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        nav ul li {
+            margin: 0.5rem 1rem;
+        }
+        
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+        
+        main {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        section {
+            background-color: var(--section-background);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-color);
+        }
+        
+        pre, code {
+            font-family: 'Fira Code', monospace;
+            background-color: var(--code-background);
+            border-radius: 4px;
+            padding: 1rem;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-size: 0.9rem;
+            border: 1px solid var(--border-color);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin-top: 1rem;
+            overflow: hidden;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+        
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        th {
+            background-color: var(--primary-color);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.8rem;
+            color: #ffffff;
+        }
+        
+        tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .endpoint {
+            background-color: var(--primary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        
+        .http-method {
+            background-color: var(--accent-color);
+            color: var(--background-color);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        .parameter-table td:first-child {
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+        
+        button {
+            background-color: var(--accent-color);
+            color: var(--background-color);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 1rem;
+        }
+        
+        button:hover {
+            background-color: #0ea5e9;
+            transform: translateY(-2px);
+        }
+        
+        #apiKeyDisplay {
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: var(--code-background);
+            border-radius: 4px;
+            font-family: 'Fira Code', monospace;
+            border: 1px solid var(--border-color);
+            word-break: break-all;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            
+            main {
+                padding: 0 1rem;
+            }
+            
+            section {
+                padding: 1.5rem;
+            }
+            
+            table, th, td {
+                font-size: 0.85rem;
+            }
+        }
+        
+        
+        [data-theme="light"] {
+            --primary-color: #b4b4b9;
+            --secondary-color: #6366f1;
+            --background-color: #f8fafc;
+            --text-color: #1f2937;
+            --accent-color: #22d3ee;
+            --code-background: #e2e8f0;
+            --section-background: #ffffff;
+            --border-color: #cbd5e1;
+        }
+        body[data-theme='dark'] {
+            --primary-color: #6366f1;
+            --secondary-color: #a5b4fc;
+            --background-color: #0f172a;
+            --text-color: #e2e8f0;
+            --accent-color: #22d3ee;
+            --code-background: #1e293b;
+            --section-background: #1e293b;
+            --border-color: #334155;
+        }
+        
+        .theme-toggle-button {
+            background-color: var(--accent-color);
+            color: var(--background-color);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 1rem 0;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        
+        .theme-toggle-button:hover {
+            background-color: #0ea5e9;
+            transform: translateY(-2px);
+        }
+        
