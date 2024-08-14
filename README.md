@@ -1,6 +1,4 @@
-# Theme Toggle Example
-
-This project demonstrates a basic implementation of a theme toggle feature using HTML, CSS, and JavaScript. It allows users to switch between light and dark themes on a webpage.
+## TryBookAI
 
 ## Table of Contents
 
